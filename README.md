@@ -31,3 +31,46 @@ User Example, via VB
             Return blnReturn
 
         End Function
+ OU
+ 
+         Public Function ObterTelefones(intCliente As Integer) As List(Of Model.Telefone)
+
+            Dim cmdDados As Command = Nothing
+            Dim dtDados As DataTable = Nothing
+            Dim oReturn As Model.Telefone = Nothing
+            Dim lstReturn As List(Of Model.Telefone) = Nothing
+
+            Try
+                cmdDados = New Command("CharlieKey")
+                cmdDados.CommandType = CommandType.StoredProcedure
+                cmdDados.CommandText = "pr_list_Telefone"
+                cmdDados.Parameters.Add(New Parameter("@id_cliente", DbType.Int32, intCliente))
+
+                dtDados = cmdDados.GetDataTable
+                oReturn = New Model.Telefone
+                lstReturn = New List(Of Model.Telefone)
+
+                If dtDados.Rows.Count > 0 Then
+                    For Each oRow In dtDados.Rows
+                        oReturn.Codigo = oRow("id_Telefone").ToString()
+                        oReturn.Cliente = oRow("id_cliente").ToString()
+                        oReturn.TipoTelefone = oRow("ds_tipo_Telefone").ToString()
+                        oReturn.DDD = oRow("nr_ddd").ToString()
+                        oReturn.Numero = oRow("nr_Telefone").ToString()
+                        oReturn.Complemento = oRow("nr_ramal").ToString()
+                        lstReturn.Add(oReturn)
+                    Next
+                End If
+            Catch ex As Exception
+                lstReturn = Nothing
+                Throw ex
+            Finally
+                oReturn = Nothing
+                cmdDados.Dispose()
+                cmdDados = Nothing
+                dtDados = Nothing
+
+            End Try
+            Return lstReturn
+
+        End Function
