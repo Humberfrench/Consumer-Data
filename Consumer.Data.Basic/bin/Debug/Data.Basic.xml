@@ -1,0 +1,1275 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Data.Basic
+</name>
+</assembly>
+<members>
+<member name="M:Data.Basic.Data.TransactCommand.#ctor(System.String)">
+	<summary>
+ Construtor do Command
+ </summary>
+	<param name="strKey">Key da String de Conexão</param>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.TransactCommand.#ctor(System.String,System.Data.CommandType,System.String)">
+	<summary>
+ Construtor do Command
+ </summary>
+	<param name="cmdText">Comando a ser executado</param>
+	<param name="cmdType">Tipo de Command, se executa uma Stored Procedure ou SQL Statment</param>
+	<param name="strKey">Chave do Config</param>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.TransactCommand.#ctor">
+	<summary>
+ Construtor do Command - Generic.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.TransactCommand.ValidateCommand">
+ -----------------------------------------------------------------------------
+ <summary>
+ Esta Sub executa a verificação dos parametros, se estão preenchidos<BR/>
+ Estes paramtros são preenchidos alimentando as propriedades abaixo.<BR/> 
+ Devem ser preenchidas TODAS:
+ <list type="bullet">
+			<item>
+				<description>Propriedade Key</description>
+			</item>
+			<item>
+				<description>Propriedade CommandText</description>
+			</item>
+			<item>
+				<description>Propriedade CommandType</description>
+			</item>
+		</list>
+		<seealso cref="P:Data.Basic.Data.Command.Key"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandText"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandTimeout"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandType"/>
+		<seealso cref="M:Data.Basic.Data.Command.GetDataTable(System.String)"/>
+		<seealso cref="M:Data.Basic.Data.Command.GetDataSet(System.String)"/>
+		<seealso cref="M:Data.Basic.Data.Command.GetDataReader"/>
+		<seealso cref="M:Data.Basic.Data.Command.Execute"/>
+		<seealso cref="M:Data.Basic.Data.Command.ExecuteScalar"/>
+		<seealso cref="M:Data.Basic.Data.Command.ExecuteNonQuery"/>
+	</summary>
+	<remarks>
+ Na verificação, caos não exista o dado preenchido é gerado um erro e este tratado nas funções
+ <list type="bullet">
+			<item>
+				<description>ReturnDataSet</description>
+			</item>
+			<item>
+				<description>ReturnDataTable</description>
+			</item>
+		</list>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.TransactCommand.BeginTransaction">
+	<summary>
+ Inicia a Transação.
+ Cria a instancia da mesma e a inicia.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.TransactCommand.CommitTransaction">
+	<summary>
+ Efetua o commit da transação.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.TransactCommand.RollBackTransaction">
+	<summary>
+ Efetua o roolback da transação.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.TransactCommand.CreateParameter">
+ -----------------------------------------------------------------------------
+ <summary>
+ Cria um novo parametro.
+ Pode se criar um parametro de duas formas conforme exemplo
+ <example>
+			<code>
+ 'Como criar parametro - forma 1:
+ Dim parData as new Parameter
+ <BR/>
+ 'Como criar parametro - forma 2, identico a forma 1:
+ Dim parData as Parameter
+ parData = new Parameter
+ <BR/>
+ 'Como criar parametro - forma 3:
+ dim parData as Parameter
+ dim cmdData as new Command
+ parData = cmdData.CreateParameter
+ </code>
+		</example>
+	</summary>
+	<returns>Um objeto do tipo Parameter</returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.TransactCommand.CreateParameter(System.String,System.Data.DbType,System.Int32,System.Object)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Cria um novo parametro para ser usado e adiciona ao command atual
+ </summary>
+	<param name="Name">nome do Parametro. Tipo String</param>
+	<param name="Value">Valor que o parametro recebe. Tipo Objeto.</param>
+	<param name="Type">Tipo do Parametro. Tipo de dado, proveniente de enumerador</param>
+	<param name="Size">Tamanho do Parametro. Para Strings, o tamanho do char/varchar</param>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.TransactCommand.GetDataTable(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Retorna um datatable.<BR/>
+ Para este Método funcionar correramente é preciso que alguns parametros estejam preenchidos corretamente.<BR/>
+ Estes paramtros são preenchidos alimentando as propriedades abaixo. <BR/>
+ Devem ser preenchidas TODAS:
+ <list type="bullet">
+			<item>
+				<term>Key</term>
+				<description>Propriedade da Chave do web.config/app.config setado para a string de conexão</description>
+			</item>
+			<item>
+				<term>CommandText</term>
+				<description>Propriedade da instrução SQL a ser rodada</description>
+			</item>
+		</list>
+		<seealso cref="P:Data.Basic.Data.Command.Key"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandText"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandTimeout"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandType"/>
+	</summary>
+	<param name="strTableName">Nome da Tabela, opcional</param>
+	<remarks>
+	</remarks>
+	<returns>DataTable</returns>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.TransactCommand.GetDataSet(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Retorna um datatable.<BR/>
+ Para este Método funcionar correramente é preciso que alguns parametros estejam preenchidos corretamente.<BR/>
+ Estes paramtros são preenchidos alimentando as propriedades abaixo. <BR/>
+ Devem ser preenchidas TODAS:
+ <list type="bullet">
+			<item>
+				<term>Key</term>
+				<description>Propriedade da Chave do web.config/app.config setado para a string de conexão</description>
+			</item>
+			<item>
+				<term>CommandText</term>
+				<description>Propriedade da instrução SQL a ser rodada</description>
+			</item>
+		</list>
+		<seealso cref="P:Data.Basic.Data.Command.Key"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandText"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandTimeout"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandType"/>
+	</summary>
+	<remarks>
+	</remarks>
+	<returns>DataSet</returns>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.TransactCommand.GetDataReader">
+	<summary>
+ Obtem um datareader, CONECTADO
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.TransactCommand.ExecuteNonQuery">
+	<summary>
+ Executa uma query
+ </summary>
+	<returns>Integer</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.TransactCommand.Execute">
+	<summary>
+ Executa uma query
+ </summary>
+	<returns>Integer</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.TransactCommand.ExecuteScalar">
+	<summary>
+ Executa uma query
+ </summary>
+	<returns>Integer</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.TransactCommand.GetSchema(System.String)">
+	<summary>
+ Obtem um Schema do Banco
+ </summary>
+	<param name="strCollectionName">O nome do Schema a retornar</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.TransactCommand.GetSchema">
+	<summary>
+ Obtem um Schema do Banco
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.TransactCommand.ResetCommandTimeout">
+ -----------------------------------------------------------------------------
+ <summary>
+ Este comando ajusta o time out do command/conexão para o tempo de 30 segundos.
+ </summary>
+	<remarks>
+ O Valor inicial de um commandtimeout é de 360 segundos
+ </remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.TransactCommand.Transaction">
+	<summary>
+ Transação
+ </summary>
+	<value>DbTransaction</value>
+	<returns>DbTransaction</returns>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Data.TransactCommand.Connection">
+	<summary>
+ Conexão do Banco
+ </summary>
+	<value>DbConnection</value>
+	<returns>DbConnection</returns>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Data.TransactCommand.Prepared">
+	<summary>
+ Torna ou não um command preparado
+ </summary>
+	<value>Boolean</value>
+	<returns>Boolean</returns>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Data.TransactCommand.Key">
+ -----------------------------------------------------------------------------
+ <summary>
+ Key que ao ser preenchida permite buscar a string de conexão com o banco de dados.
+ </summary>
+	<value>String</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.TransactCommand.CommandText">
+ -----------------------------------------------------------------------------
+ <summary>
+ Instrução de SQL para ser executada. <BR/>
+ Pode ser uma prodedure ou uma instrução normal de SQL
+ </summary>
+	<value>String</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.TransactCommand.CommandTextObject">
+	<summary>
+ Command Text, setável dentro de uma StringBuilder
+ </summary>
+	<value>StringBuilder</value>
+	<returns>StringBuilder</returns>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Data.TransactCommand.CommandTimeout">
+ -----------------------------------------------------------------------------
+ <summary>
+ Tempo Limite de espera para execução de um comando. A unidade de tempo é em segundos.
+ </summary>
+	<value>Inteiro. Representa o tempo em segundos</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.TransactCommand.CommandType">
+ -----------------------------------------------------------------------------
+ <summary>
+ Enumerado especificando o tipo de commando
+ Para melhor informação veja em <seealso cref="T:System.Data.CommandType">System.Data.CommandType</seealso>
+	</summary>
+	<value>Tipo Inteiro, para o numerador System.Data.CommandType</value>
+	<remarks>
+ Renderiza um enumerador vindo de System.Data.CommandType. Qualquer alteração na origem afeta
+ esta classe, de forma transparente, sem ocasionar quebras de compatibilidade internas.
+ </remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.TransactCommand.Parameters">
+ -----------------------------------------------------------------------------
+ <summary>
+ Coleção de objetos Parameter. Serve para guardar parametros para execução de uma query.
+ </summary>
+	<value>Parameter</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.Command.#ctor">
+	<summary>
+ Construtor do Command
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.Command.#ctor(System.String)">
+	<summary>
+ Construtor do Command
+ </summary>
+	<param name="strKey">Key da String de Conexão</param>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.Command.#ctor(System.String,System.Data.CommandType,System.String)">
+	<summary>
+ Construtor do Command
+ </summary>
+	<param name="cmdText">Comando a ser executado</param>
+	<param name="cmdType">Tipo de Command, se executa uma Stored Procedure ou SQL Statment</param>
+	<param name="strKey">Chave do Config</param>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.Command.BuildCommand">
+	<summary>
+ Construtor do Command - Generic.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.Command.ValidateCommand">
+ -----------------------------------------------------------------------------
+ <summary>
+ Esta Sub executa a verificação dos parametros, se estão preenchidos<BR/>
+ Estes paramtros são preenchidos alimentando as propriedades abaixo.<BR/> 
+ Devem ser preenchidas TODAS:
+ <list type="bullet">
+			<item>
+				<description>Propriedade Key</description>
+			</item>
+			<item>
+				<description>Propriedade CommandText</description>
+			</item>
+			<item>
+				<description>Propriedade CommandType</description>
+			</item>
+		</list>
+		<seealso cref="P:Data.Basic.Data.Command.Key"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandText"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandTimeout"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandType"/>
+		<seealso cref="M:Data.Basic.Data.Command.GetDataTable(System.String)"/>
+		<seealso cref="M:Data.Basic.Data.Command.GetDataSet(System.String)"/>
+		<seealso cref="M:Data.Basic.Data.Command.GetDataReader"/>
+		<seealso cref="M:Data.Basic.Data.Command.Execute"/>
+		<seealso cref="M:Data.Basic.Data.Command.ExecuteScalar"/>
+		<seealso cref="M:Data.Basic.Data.Command.ExecuteNonQuery"/>
+	</summary>
+	<remarks>
+ Na verificação, caos não exista o dado preenchido é gerado um erro e este tratado nas funções
+ <list type="bullet">
+			<item>
+				<description>ReturnDataSet</description>
+			</item>
+			<item>
+				<description>ReturnDataTable</description>
+			</item>
+		</list>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.Command.CreateParameter">
+ -----------------------------------------------------------------------------
+ <summary>
+ Cria um novo parametro.
+ Pode se criar um parametro de duas formas conforme exemplo
+ <example>
+			<code>
+ 'Como criar parametro - forma 1:
+ Dim parData as new Parameter
+ <BR/>
+ 'Como criar parametro - forma 2, identico a forma 1:
+ Dim parData as Parameter
+ parData = new Parameter
+ <BR/>
+ 'Como criar parametro - forma 3:
+ dim parData as Parameter
+ dim cmdData as new Command
+ parData = cmdData.CreateParameter
+ </code>
+		</example>
+	</summary>
+	<returns>Um objeto do tipo Parameter</returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.Command.CreateParameter(System.String,System.Data.DbType,System.Int32,System.Object)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Cria um novo parametro para ser usado e adiciona ao command atual
+ </summary>
+	<param name="Name">nome do Parametro. Tipo String</param>
+	<param name="Value">Valor que o parametro recebe. Tipo Objeto.</param>
+	<param name="Type">Tipo do Parametro. Tipo de dado, proveniente de enumerador</param>
+	<param name="Size">Tamanho do Parametro. Para Strings, o tamanho do char/varchar</param>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.Command.GetDataTable(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Retorna um datatable.<BR/>
+ Para este Método funcionar correramente é preciso que alguns parametros estejam preenchidos corretamente.<BR/>
+ Estes paramtros são preenchidos alimentando as propriedades abaixo. <BR/>
+ Devem ser preenchidas TODAS:
+ <list type="bullet">
+			<item>
+				<term>Key</term>
+				<description>Propriedade da Chave do web.config/app.config setado para a string de conexão</description>
+			</item>
+			<item>
+				<term>CommandText</term>
+				<description>Propriedade da instrução SQL a ser rodada</description>
+			</item>
+		</list>
+		<seealso cref="P:Data.Basic.Data.Command.Key"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandText"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandTimeout"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandType"/>
+	</summary>
+	<param name="strTableName">Nome da Tabela, opcional</param>
+	<remarks>
+	</remarks>
+	<returns>DataTable</returns>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.Command.GetDataSet(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Retorna um datatable.<BR/>
+ Para este Método funcionar correramente é preciso que alguns parametros estejam preenchidos corretamente.<BR/>
+ Estes paramtros são preenchidos alimentando as propriedades abaixo. <BR/>
+ Devem ser preenchidas TODAS:
+ <list type="bullet">
+			<item>
+				<term>Key</term>
+				<description>Propriedade da Chave do web.config/app.config setado para a string de conexão</description>
+			</item>
+			<item>
+				<term>CommandText</term>
+				<description>Propriedade da instrução SQL a ser rodada</description>
+			</item>
+		</list>
+		<seealso cref="P:Data.Basic.Data.Command.Key"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandText"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandTimeout"/>
+		<seealso cref="P:Data.Basic.Data.Command.CommandType"/>
+	</summary>
+	<remarks>
+	</remarks>
+	<returns>DataSet</returns>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.Command.GetDataReader">
+	<summary>
+ Obtem um datareader, DESCONECTADO
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.Command.ExecuteNonQuery">
+	<summary>
+ Executa uma query
+ </summary>
+	<returns>Integer</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.Command.Execute">
+	<summary>
+ Executa uma query
+ </summary>
+	<returns>Integer</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.Command.ExecuteScalar">
+	<summary>
+ Executa uma query
+ </summary>
+	<returns>Integer</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.Command.GetSchema(System.String)">
+	<summary>
+ Obtem um Schema do Banco
+ </summary>
+	<param name="strCollectionName">O nome do Schema a retornar</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.Command.GetSchema">
+	<summary>
+ Obtem um Schema do Banco
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.Command.ResetCommandTimeout">
+ -----------------------------------------------------------------------------
+ <summary>
+ Este comando ajusta o time out do command/conexão para o tempo de 30 segundos.
+ </summary>
+	<remarks>
+ O Valor inicial de um commandtimeout é de 360 segundos
+ </remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Command.Prepared">
+	<summary>
+ Torna ou não um command preparado
+ </summary>
+	<value>Boolean</value>
+	<returns>Boolean</returns>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Data.Command.Key">
+ -----------------------------------------------------------------------------
+ <summary>
+ Key que ao ser preenchida permite buscar a string de conexão com o banco de dados.
+ </summary>
+	<value>String</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Command.CommandText">
+ -----------------------------------------------------------------------------
+ <summary>
+ Instrução de SQL para ser executada. <BR/>
+ Pode ser uma prodedure ou uma instrução normal de SQL
+ </summary>
+	<value>String</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Command.CommandTextObject">
+	<summary>
+ Command Text, setável dentro de uma StringBuilder
+ </summary>
+	<value>StringBuilder</value>
+	<returns>StringBuilder</returns>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Data.Command.CommandTimeout">
+ -----------------------------------------------------------------------------
+ <summary>
+ Tempo Limite de espera para execução de um comando. A unidade de tempo é em segundos.
+ </summary>
+	<value>Inteiro. Representa o tempo em segundos</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Command.CommandType">
+ -----------------------------------------------------------------------------
+ <summary>
+ Enumerado especificando o tipo de commando
+ Para melhor informação veja em <seealso cref="T:System.Data.CommandType">System.Data.CommandType</seealso>
+	</summary>
+	<value>Tipo Inteiro, para o numerador System.Data.CommandType</value>
+	<remarks>
+ Renderiza um enumerador vindo de System.Data.CommandType. Qualquer alteração na origem afeta
+ esta classe, de forma transparente, sem ocasionar quebras de compatibilidade internas.
+ </remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Command.Parameters">
+ -----------------------------------------------------------------------------
+ <summary>
+ Coleção de objetos Parameter. Serve para guardar parametros para execução de uma query.
+ </summary>
+	<value>Parameter</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Data.Basic.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Data.Basic.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:Data.Basic.Security.Encript.DecryptNumber(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Função que faz a decriptografia de números
+ </summary>
+	<param name="strTexto">Texto contendo os números criptografados</param>
+	<returns>Inteiro</returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Security.Encript.DecryptQueryString(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Funçao que faz a decriptografia de querystring.
+ </summary>
+	<param name="strTexto">Texto a ser Decriptografado</param>
+	<returns>Texto Original</returns>
+	<remarks>
+ Usado para retirar da querystring o valor.
+ </remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Security.Encript.Decrypt(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Decriptografia normal do texto
+ </summary>
+	<param name="strTexto">Valor criptografado</param>
+	<returns>String, original.</returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Security.Encript.DecryptString(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Decriptografa String
+ </summary>
+	<param name="strTexto">Texto a ser decriptografado</param>
+	<returns>String, original</returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Security.Encript.EncryptNumber(System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Executa a criptografia de um número
+ </summary>
+	<param name="auxNumero">Número a ser criptografado</param>
+	<returns>Uma String criptografada equivalente ao original</returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Security.Encript.EncryptQueryString(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Executa a criptografia de um querystring
+ </summary>
+	<returns>Uma String criptografada equivalente ao original</returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Security.Encript.Encrypt(System.String,System.Boolean)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Executa a criptografia de um texto comum
+ </summary>
+	<returns>Uma String criptografada equivalente ao original</returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Security.Encript.EncryptString(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Executa a criptografia de uma string
+ </summary>
+	<returns>Uma String criptografada equivalente ao original</returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:Data.Basic.Security.Encript">
+	<summary>
+ EncriptData - Classe que executa a criptografia de dados de forma simples.
+ </summary>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.Parameter.Dispose(System.Boolean)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Função dispose, que destroi o objeto.
+ </summary>
+	<param name="Disposable">Se true, o objeto é destruido.</param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.Parameter.Finalize">
+ -----------------------------------------------------------------------------
+ <summary>
+ Destrutior do objeto. Chamada quando a instancia do mesmo é setada para True.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="F:Data.Basic.Data.Parameter.intDbType">
+ -----------------------------------------------------------------------------
+ <summary>
+ Variável auxiliar do projeto.
+ Campo que Renderiza a propridedade dbType
+ <seealso cref="T:System.Data.DbType"/>
+		<seealso cref="P:Data.Basic.Data.Parameter.DbType"/>
+	</summary>
+	<remarks>
+ Tipo de Dados declarado como <b><i>"Protected"</i></b>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="F:Data.Basic.Data.Parameter.intDirection">
+ -----------------------------------------------------------------------------
+ <summary>
+ Variável auxiliar do projeto.
+ Campo que Renderiza a propridedade Direction
+ <seealso cref="P:Data.Basic.Data.Parameter.Direction"/>
+	</summary>
+	<remarks>
+ Tipo de Dados declarado como <b><i>"Protected"</i></b>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="F:Data.Basic.Data.Parameter.strName">
+ -----------------------------------------------------------------------------
+ <summary>
+ Variável auxiliar do projeto.
+ Campo que Renderiza a propridedade Name
+ <seealso cref="P:Data.Basic.Data.Parameter.Name"/>
+	</summary>
+	<remarks>
+ Tipo de Dados declarado como <b><i>"Protected"</i></b>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="F:Data.Basic.Data.Parameter.objValue">
+ -----------------------------------------------------------------------------
+ <summary>
+ Variável auxiliar do projeto.
+ Campo que Renderiza a propridedade Value
+ <seealso cref="P:Data.Basic.Data.Parameter.Value"/>
+	</summary>
+	<remarks>
+ Tipo de Dados declarado como <b><i>"Protected"</i></b>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="F:Data.Basic.Data.Parameter.intSize">
+ -----------------------------------------------------------------------------
+ <summary>
+ Variável auxiliar do projeto.
+ Campo que Renderiza a propridedade CommandTimeout
+ </summary>
+	<remarks>
+ Tipo de Dados declarado como <b><i>"Protected"</i></b>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="F:Data.Basic.Data.Parameter.strSourceColumn">
+ -----------------------------------------------------------------------------
+ <summary>
+ Variável auxiliar do projeto.
+ Campo que Renderiza a propridedade Size
+ <seealso cref="P:Data.Basic.Data.Parameter.Size"/>
+	</summary>
+	<remarks>
+ Tipo de Dados declarado como <b><i>"Protected"</i></b>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="F:Data.Basic.Data.Parameter.blnIsNullable">
+ -----------------------------------------------------------------------------
+ <summary>
+ Variável auxiliar do projeto.
+ Campo que Renderiza a propridedade IsNullable
+ <seealso cref="P:Data.Basic.Data.Parameter.IsNullable"/>
+	</summary>
+	<remarks>
+ Tipo de Dados declarado como <b><i>"Protected"</i></b>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="F:Data.Basic.Data.Parameter.blnIsKey">
+	<summary>
+ Variável que verifica se o campo é ou não chave. New in 4.0
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Data.Basic.Data.Parameter.blnIsCounter">
+	<summary>
+ Variável que indica que o campo é um contador - Propriedade específica para o class builder - New in 1.5
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.Parameter.#ctor">
+ -----------------------------------------------------------------------------
+ <summary>
+ Construtor da Classe de Parâmetro. <BR/>
+ Cria um novo parametro para ser usado.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.Parameter.#ctor(System.String,System.Object)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Construtor da Classe de Parâmetro. <BR/>
+ Cria um novo parametro para ser usado.
+ </summary>
+	<param name="Name">nome do Parametro. Tipo String</param>
+	<param name="Value">Valor que o parametro recebe. Tipo Objeto.</param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.Parameter.#ctor(System.String,System.Data.DbType,System.Object)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Construtor da Classe de Parâmetro. <BR/>
+ Cria um novo parametro para ser usado.
+ </summary>
+	<param name="Name">nome do Parametro. Tipo String</param>
+	<param name="Value">Valor que o parametro recebe. Tipo Objeto.</param>
+	<param name="Type">Tipo do Parametro. Tipo de dado, proveniente de enumerador</param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.Parameter.#ctor(System.String,System.Data.DbType,System.Int32,System.Object)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Construtor da Classe de Parâmetro. <BR/>
+ Cria um novo parametro para ser usado.
+ </summary>
+	<param name="Name">nome do Parametro. Tipo String</param>
+	<param name="Value">Valor que o parametro recebe. Tipo Objeto.</param>
+	<param name="Type">Tipo do Parametro. Tipo de dado, proveniente de enumerador</param>
+	<param name="Size">Tamanho do Parametro. Para Strings, o tamanho do char/varchar</param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Parameter.IsNullable">
+ -----------------------------------------------------------------------------
+ <summary>
+ Propriedade Que contem o valor do tipo do parâmetro se é permitido nulo ou não.
+ </summary>
+	<value>Boolean</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Parameter.IsKey">
+	<summary>
+ Propriedade Verificadora se o campo é chave primaria ou não
+ </summary>
+	<value>Boolean</value>
+	<returns>Boolean</returns>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Data.Parameter.IsCounter">
+	<summary>
+ Propriedade que seta se o campo é ou não contador
+ </summary>
+	<value>Boolean</value>
+	<returns>Boolean</returns>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Data.Parameter.SourceColumn">
+ -----------------------------------------------------------------------------
+ <summary>
+ Propriedade Que contem o nome da coluna do parametro
+ </summary>
+	<value>String</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Parameter.DbType">
+ -----------------------------------------------------------------------------
+ <summary>
+ Tipo do Parametro, valor proveniente de um enumerador do banco de dados
+ </summary>
+	<value>Inteiro (dbType)</value>
+	<seealso cref="T:System.Data.DbType"/>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Parameter.Direction">
+ -----------------------------------------------------------------------------
+ <summary>
+ Parâmetro que indica a direção, pode ser parâmetro de entrada, de saída ou os dois.
+ </summary>
+	<value>ParameterDirection - Tipo Inteiro.</value>
+	<seealso cref="T:System.Data.ParameterDirection"/>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Parameter.ParameterName">
+ -----------------------------------------------------------------------------
+ <summary>
+ Nome do parâmetro.
+ </summary>
+	<value>String</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Parameter.Name">
+ -----------------------------------------------------------------------------
+ <summary>
+ Nome do parâmetro.
+ </summary>
+	<value>String</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Parameter.Value">
+ -----------------------------------------------------------------------------
+ <summary>
+ Valor do parâmetro
+ </summary>
+	<value>Object, mas pode ser qualquer tipo de dado primitivo.</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Data.Basic.Data.Parameter.Size">
+ -----------------------------------------------------------------------------
+ <summary>
+ Tamanho da String.<br/>
+ Válido somente para tipos que conhenham strings como:
+ <list type="bullet">
+			<item>
+				<description>Char</description>
+			</item>
+			<item>
+				<description>VarChar</description>
+			</item>
+			<item>
+				<description>NVarChar</description>
+			</item>
+		</list>
+	</summary>
+	<value>Tamkanho da String. Tipo Inteiro.</value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Data.Parameter.ToString">
+ -----------------------------------------------------------------------------
+ <summary>
+ Retorna o Parametro convertido para String. Na verdade retorna o nome do parametro
+ </summary>
+	<returns>String</returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[humberto]	07/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:Data.Basic.Data.Parameter">
+	<summary>
+ Classe que renderiza um parametro para o command executar as procedures, ou queries parametrizadas.
+ </summary>
+	<remarks>
+		<seealso cref="T:Data.Basic.Data.Command"/>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Data.Basic.Security.ConnectionString.#ctor">
+	<summary>
+ Construtor padrão
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.#ctor(System.String,System.String,System.String,System.String)">
+	<summary>
+ Construtor para inicializar com valores os parâmetros do Banco.
+ </summary>
+	<param name="pStrServer">Nome do Servidor</param>
+	<param name="pStrUserName">Nome do Usuário</param>
+	<param name="pStrPassword">Senha. Por padrão deve vir Criptografada</param>
+	<param name="pStrDataBase">Nome do Banco</param>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.#ctor(System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Construtor para inicializar com valores os parâmetros do Banco. Com provider selecionado
+ </summary>
+	<param name="pStrServer">Nome do Servidor</param>
+	<param name="pStrUserName">Nome do Usuário</param>
+	<param name="pStrPassword">Senha. Por padrão deve vir Criptografada</param>
+	<param name="pStrDataBase">Nome do Banco</param>
+	<param name="pStrProvider">Provider Name</param>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.#ctor(System.String)">
+	<summary>
+ Construtor, que aceita o key do config como parâmetro, buscando já a string de conexão
+ </summary>
+	<param name="strKey">Key do Config</param>
+	<remarks>Este construtor já considera que a senha da string de conexão virá criptografada. Caso não venha, haverá erro.</remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.#ctor(System.String,System.Boolean)">
+	<summary>
+ Construtor que recebe a string de conexão criptografada ou não.
+ </summary>
+	<param name="strConectionString">String de Conexão</param>
+	<param name="blnIsPasswordCrypt">Se é criptografada ou não</param>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.GetConectionString(System.String)">
+	<summary>
+ Obtem a string de Conexão de acordo com o Key
+ </summary>
+	<param name="strKey">Key, que deve estar na seção de appSettings ou connectionStrings</param>
+	<returns>String</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.ValidatePropertiesOleDB">
+	<summary>
+ Valida as propriedades se foram preenchidas corretamente - OLE DB
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.ValidatePropertiesSQL">
+	<summary>
+ Valida as propriedades se foram preenchidas corretamente - SQL
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.GetConectionString">
+	<summary>
+ Obtem a string de Conexão com a senha criptografada
+ Método importante para atualizar as chaves do config
+ </summary>
+	<returns>String</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.GetConectionStringForConnect">
+	<summary>
+ Obtem a string de Conexão com a senha de-criptografada
+ Este método é o que se usa para obter a string de conexão do config com a senha criptografada, e 
+ ser usado para conectar a base de dados
+ </summary>
+	<returns>String</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.GetData(System.String,System.Boolean)">
+	<summary>
+ Método que pega a string de coenxão e preenche as propriedades desta classe presente
+ </summary>
+	<param name="strConection">String de Conexão</param>
+	<param name="blnIsPasswordCrypt">Se a senha está ou não criptografada</param>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.GetDataOleDB(System.String)">
+	<summary>
+ Método que pega a string de coenxão e 
+ preenche as propriedades desta classe presente, 
+ válido para Ole DB Providers
+ </summary>
+	<param name="strConection">String de Conexão</param>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.GetDataSQL(System.String,System.Boolean)">
+	<summary>
+ Método que pega a string de coenxão e 
+ preenche as propriedades desta classe presente, 
+ válido para SQLs Providers
+ </summary>
+	<param name="strConection">String de Conexão</param>
+	<param name="blnIsPasswordCrypt">Se a senha está ou não criptografada</param>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Security.ConnectionString.WriteToKey(System.String)">
+	<summary>
+ Grava a string de conexão na chave do config
+ Como o padrão de desenvolvimento é o framework 2.0 este método exclusivamente grava na seção do
+ config reservada as strings de Conexão
+ </summary>
+	<param name="strKeyName">Nome da Key para ser gravado</param>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Security.ConnectionString.ServerName">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Security.ConnectionString.UserName">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Security.ConnectionString.Password">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Security.ConnectionString.DataBase">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Data.Basic.Security.ConnectionString.ProviderName">
+	<summary>
+ Nome do Provider que será feita a conexão com o banco de dados.
+ </summary>
+	<value>String</value>
+	<returns>String</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.MyDbConnection.#ctor">
+	<summary>
+ Construtor Básico
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.MyDbConnection.#ctor(System.String)">
+	<summary>
+ Construtor Básico
+ </summary>
+	<param name="strMyKeyName">Nome da chave do config que contém a string de conexão.</param>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.MyDbConnection.BuildProvider">
+	<summary>
+ Construtor. Este método constroi todos os objetos e é chamado pelos construtores acima detalhados
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.MyDbConnection.ValidateProviderName(System.String)">
+	<summary>
+ Efetua a validação do provider solicitado para a conexão. E verifica se o mesmo está ou não instalado
+ </summary>
+	<param name="strProviderName">Nome do Provider de Dados</param>
+	<returns>Booleano</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.MyDbConnection.GetDataTable(System.Data.Common.DbCommand)">
+	<summary>
+ Obtem um DataTable desconectado
+ </summary>
+	<param name="oCommand">Interface de Command que contém as informações para carregar o DataTable</param>
+	<returns>DataTable</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.MyDbConnection.GetDataSet(System.Data.Common.DbCommand)">
+	<summary>
+ Obtem um DataSet desconectado
+ </summary>
+	<param name="oCommand">Interface de Command que contém as informações para carregar o DataSet</param>
+	<returns>DataSet</returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.MyDbConnection.GetNewCommand">
+	<summary>
+ Obtém um command do tipo DbCommand
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.MyDbConnection.GetNewParameter">
+	<summary>
+ Obtém um Parameter do tipo DbParameter
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.MyDbConnection.GetSchema(System.String)">
+	<summary>
+ Obtem um Schema do Banco
+ </summary>
+	<param name="strCollectionName">O nome do Schema a retornar</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.MyDbConnection.GetSchema">
+	<summary>
+ Obtem um Schema do Banco
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Data.Basic.Data.MyDbConnection.Close">
+	<summary>
+ Fecha a Conexão
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

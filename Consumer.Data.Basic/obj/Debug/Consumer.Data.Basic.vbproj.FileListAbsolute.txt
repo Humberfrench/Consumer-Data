@@ -1,0 +1,33 @@
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.Resources.resources
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.vbproj.GenerateResource.Cache
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Debug\Consumer.Data.Basic.dll
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Debug\Consumer.Data.Basic.pdb
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Debug\Consumer.Data.Basic.xml
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.dll
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.xml
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.pdb
+C:\Documentos Humber\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Debug\Consumer.Data.Basic.dll
+C:\Documentos Humber\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Debug\Consumer.Data.Basic.pdb
+C:\Documentos Humber\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Debug\Consumer.Data.Basic.xml
+C:\Documentos Humber\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.Resources.resources
+C:\Documentos Humber\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.vbproj.GenerateResource.Cache
+C:\Documentos Humber\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.dll
+C:\Documentos Humber\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.xml
+C:\Documentos Humber\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.pdb
+C:\Users\BETO E TAIS\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Debug\Consumer.Data.Basic.dll
+C:\Users\BETO E TAIS\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Debug\Consumer.Data.Basic.pdb
+C:\Users\BETO E TAIS\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Debug\Consumer.Data.Basic.xml
+C:\Users\BETO E TAIS\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.Resources.resources
+C:\Users\BETO E TAIS\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.vbproj.GenerateResource.Cache
+C:\Users\BETO E TAIS\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.dll
+C:\Users\BETO E TAIS\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.xml
+C:\Users\BETO E TAIS\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.pdb
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Debug\Consumer.Data.Basic.dll
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Debug\Consumer.Data.Basic.pdb
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Debug\Consumer.Data.Basic.xml
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.vbprojResolveAssemblyReference.cache
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.Resources.resources
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.vbproj.GenerateResource.Cache
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.dll
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.xml
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Debug\Consumer.Data.Basic.pdb

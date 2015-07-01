@@ -1,0 +1,9 @@
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Release\Consumer.Data.Basic.dll
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Release\Consumer.Data.Basic.pdb
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\bin\Release\Consumer.Data.Basic.xml
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Release\Consumer.Data.Basic.Resources.resources
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Release\Consumer.Data.Basic.vbproj.GenerateResource.Cache
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Release\Consumer.Data.Basic.dll
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Release\Consumer.Data.Basic.xml
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Release\Consumer.Data.Basic.pdb
+C:\Users\Humberto\Dropbox\Desenvolvimento\Frameworks\New Framework\Consumer.Data.Basic\obj\Release\Consumer.Data.Basic.vbprojResolveAssemblyReference.cache

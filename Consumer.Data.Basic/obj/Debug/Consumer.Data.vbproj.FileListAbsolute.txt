@@ -1,0 +1,10 @@
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\Consumer.Data.Resources.resources
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\bin\Debug\Consumer.Data.dll
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\bin\Debug\Consumer.Data.pdb
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\bin\Debug\Consumer.Data.xml
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\Consumer.Data.dll
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\Consumer.Data.xml
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\Consumer.Data.pdb

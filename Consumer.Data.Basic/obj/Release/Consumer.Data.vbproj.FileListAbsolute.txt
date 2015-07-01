@@ -1,0 +1,4 @@
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Release\Consumer.Data.Resources.resources
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Release\GenerateResource.read.1.tlog
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Release\GenerateResource.write.1.tlog

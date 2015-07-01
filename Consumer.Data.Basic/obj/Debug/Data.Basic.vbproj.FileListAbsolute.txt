@@ -1,0 +1,28 @@
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\Data.Basic.Resources.resources
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\bin\Debug\Data.Basic.dll
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\bin\Debug\Data.Basic.pdb
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\bin\Debug\Data.Basic.xml
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\Data.Basic.dll
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\Data.Basic.xml
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\Consumer.Data\obj\Debug\Data.Basic.pdb
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\New Framework\Data.Basic\bin\Debug\Data.Basic.dll
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\New Framework\Data.Basic\bin\Debug\Data.Basic.pdb
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\New Framework\Data.Basic\bin\Debug\Data.Basic.xml
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\New Framework\Data.Basic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\New Framework\Data.Basic\obj\Debug\Data.Basic.Resources.resources
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\New Framework\Data.Basic\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\New Framework\Data.Basic\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\New Framework\Data.Basic\obj\Debug\Data.Basic.dll
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\New Framework\Data.Basic\obj\Debug\Data.Basic.xml
+C:\Users\Humberto.Gonçalves\Documents\Humberto\Desenvolvimento\Frameworks\New Framework\Data.Basic\obj\Debug\Data.Basic.pdb
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Data.Basic\obj\Debug\Data.Basic.Resources.resources
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Data.Basic\obj\Debug\Data.Basic.vbproj.GenerateResource.Cache
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Data.Basic\bin\Debug\Data.Basic.dll
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Data.Basic\bin\Debug\Data.Basic.pdb
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Data.Basic\bin\Debug\Data.Basic.xml
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Data.Basic\obj\Debug\Data.Basic.dll
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Data.Basic\obj\Debug\Data.Basic.xml
+C:\Users\Humberto.Gonçalves.CMA\Dropbox\Desenvolvimento\Frameworks\New Framework\Data.Basic\obj\Debug\Data.Basic.pdb
